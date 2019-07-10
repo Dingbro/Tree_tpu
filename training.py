@@ -222,7 +222,7 @@ def construct_model():
     new_model = Model(model.inputs, new_output)
     return new_model
 
-resolver = tf.contrib.cluster_resolver.TPUClusterResolver('grpc://' + os.environ['COLAB_TPU_ADDR'])
+resolver = tf.contrib.cluster_resolver.TPUClusterResolver(tpu=[os.environ['TPU_NAME']])
 tf.contrib.distribute.initialize_tpu_system(resolver)
 strategy = tf.contrib.distribute.TPUStrategy(resolver)
 
