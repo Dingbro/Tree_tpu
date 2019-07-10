@@ -242,7 +242,7 @@ callbacks_list = [checkpoint]
 model.fit(
     traindataset,
     epochs = 100,
-    steps_per_epoch = 100,
+    steps_per_epoch = 12,
     validation_data = valdataset,
     validation_steps = 20,
     validation_freq = 10,
