@@ -70,7 +70,7 @@ def weighted_binary_crossentropy(pos_weight=1):
 
 
 AUTO = tf.data.experimental.AUTOTUNE
-NUM_BATCH = 512
+NUM_BATCH = 4096
 folder_name = ['fold0', 'fold1', 'fold2', 'fold3', 'fold4' ]
 #folder_name = ['fold1', 'fold2']
 dataset_dir = 'gs://tree_patch_dataset/v7_before_cleansing/training/tfrec'
