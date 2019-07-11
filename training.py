@@ -146,7 +146,7 @@ def preprocess(image, class_num, label, filename):
     return image, class_num
 
 def make_dataset_helper(dataset):
-    dataset = dataset.interleave(tf.data.TFRecordDataset, cycle_length=16, num_parallel_calls=AUTO)
+    dataset = dataset.interleave(tf.data.TFRecordDataset, cycle_length=AUTO, num_parallel_calls=AUTO)
     dataset = dataset.map(read_tfrecord, num_parallel_calls=AUTO)
     dataset = dataset.repeat()
 
